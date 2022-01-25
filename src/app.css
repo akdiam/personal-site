@@ -1,0 +1,17 @@
+@import '@fontsource/fira-mono';
+
+html {
+	font-family: monospace;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+}
+
+#svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(20, 20, 20);
+}
