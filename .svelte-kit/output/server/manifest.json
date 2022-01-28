@@ -4,7 +4,7 @@
     "src": ".svelte-kit/build/app.js",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -12,10 +12,10 @@
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-6fac7577.css"
+      "assets/entries/pages/__layout.svelte-141152c8.css"
     ],
     "assets": [
       "assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2",
@@ -33,7 +33,7 @@
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ]
   },
   "src/routes/index.svelte": {
@@ -41,10 +41,10 @@
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-5e71baac.css"
+      "assets/entries/pages/index.svelte-39b3df4d.css"
     ]
   },
   "src/routes/experiences/index.svelte": {
@@ -52,7 +52,7 @@
     "src": "src/routes/experiences/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ],
     "css": [
       "assets/entries/pages/experiences/index.svelte-567d23eb.css"
@@ -63,7 +63,7 @@
     "src": "src/routes/projects/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ]
   },
   "src/routes/etc/index.svelte": {
@@ -71,10 +71,10 @@
     "src": "src/routes/etc/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-2dc61825.js"
+      "_index-08869495.js"
     ]
   },
-  "_index-2dc61825.js": {
-    "file": "chunks/index-2dc61825.js"
+  "_index-08869495.js": {
+    "file": "chunks/index-08869495.js"
   }
 }

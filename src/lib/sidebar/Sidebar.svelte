@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { theme } from '$lib/stores';
 	export let current;
 	export let toggleActive;
 	export let isSidebarOpen;
@@ -10,7 +11,17 @@
 	const gotoGithub = () => {
 		window.open('https://github.com/akdiam', '_blank');
 	}
+	
+	const togglePalette = () => {
+		const nextTheme = $theme === 'dark' ? 'light' : 'dark';
+		theme.set(nextTheme);
+		localStorage.setItem('theme', nextTheme);
+	}
 </script>
+
+<svelte:head>
+	<link rel="stylesheet" href={`theme/${$theme}.css`} />
+</svelte:head>
 
 <div class="sidebar" id="sidebar" class:expanded={isSidebarOpen}>
 	<div class="sidebar_links">
@@ -20,24 +31,25 @@
 		<a id="etc" href="/etc" class:active={current === 'etc'} on:click={toggleActive}>etc</a>
 	</div>
 	<div class="sidebar_footer">
-		<div class="myname"><span style="color:rgb(138, 138, 138)">adam kim</span></div>
+		<div class="myname"><span>adam kim</span></div>
 		<div class="currently_playing"></div>
-		<div class="user_info"></div>
+		<div class="user_info" on:click={togglePalette}></div>
 		<div class="icons">
 			<img src="svg/linkedin.svg" alt="linkedin icon" height="40px" style="margin:10px" on:click={gotoLinkedin}>
 			<img src="svg/github.svg" alt="github icon" height="40px" style="margin:10px" on:click={gotoGithub}>
 		</div>
-		<div class="footer"><span style="color:rgb(138, 138, 138)">2022</span></div>
+		<div class="footer"><span>2022</span></div>
 	</div>
 </div>
 
 <style>
 	/* The side navigation menu */
 	.sidebar {
+		transition: background-color 0.3s;
 		margin: 0;
 		padding: 0;
 		width: 250px;
-		background-color: rgb(54,54,54);
+		background-color: var(--color-primary);
 		position: fixed;
 		min-height: 100%; 
 		overflow: auto;
@@ -48,6 +60,7 @@
 
 	.expanded {
 		transition: ease-out 200ms;
+		transition: background-color 0.3s;
 		width: 250px !important;
 		z-index: 20;
 	}
@@ -71,14 +84,16 @@
 	
 	/* Active/current link */
 	.sidebar .sidebar_links a.active {
-		background-color: #fdef2fe8;
+		transition: background-color 0.3s;
+		background-color: var(--color-secondary);
 		color: black;
 		outline: none;
 	}
 	
 	/* Links on mouse-over */
 	.sidebar .sidebar_links a:hover:not(.active) {
-		background-color: #555;
+		transition: background-color 0.3s;
+		background-color: var(--color-secondary-hover);
 		color: white;
 	}
 
@@ -95,9 +110,15 @@
 		padding-bottom: 20px;
 	}
 
+	.myname, .footer {
+		transition: background-color 0.3s;
+		color: var(--text-primary);
+	}
+
 	/* On screens that are less than 850px wide, hide the sidebar */
 	@media screen and (max-width: 850px) {
 		.sidebar {
+			transition: background-color 0.3s;
 			height: auto;
 			position: fixed;
 			top: 0;
@@ -108,6 +129,7 @@
 	}
 
 	.user_info {
+		transition: background-color 0.3s;
 		display: inline-block;
 		width: 150px;
 		height: 150px;
@@ -118,7 +140,7 @@
 		background-size: cover;
 
 		background-image: url(../../../static/img/headshot.jpeg);
-		border: 2px solid grey;
+		border: 2px solid var(--color-secondary);
 	}
 
 	.currently_playing {

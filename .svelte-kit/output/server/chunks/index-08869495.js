@@ -1,3 +1,5 @@
+function noop() {
+}
 function run(fn) {
   return fn();
 }
@@ -6,6 +8,16 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
+}
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    return noop;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
 let current_component;
 function set_current_component(component) {
@@ -20,6 +32,32 @@ function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
 }
 Promise.resolve();
+const boolean_attributes = new Set([
+  "allowfullscreen",
+  "allowpaymentrequest",
+  "async",
+  "autofocus",
+  "autoplay",
+  "checked",
+  "controls",
+  "default",
+  "defer",
+  "disabled",
+  "formnovalidate",
+  "hidden",
+  "ismap",
+  "loop",
+  "multiple",
+  "muted",
+  "nomodule",
+  "novalidate",
+  "open",
+  "playsinline",
+  "readonly",
+  "required",
+  "reversed",
+  "selected"
+]);
 const escaped = {
   '"': "&quot;",
   "'": "&#39;",
@@ -76,4 +114,9 @@ function create_ssr_component(fn) {
     $$render
   };
 }
-export { create_ssr_component as c, escape as e, missing_component as m, setContext as s, validate_component as v };
+function add_attribute(name, value, boolean) {
+  if (value == null || boolean && !value)
+    return "";
+  return ` ${name}${value === true && boolean_attributes.has(name) ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
+}
+export { safe_not_equal as a, subscribe as b, create_ssr_component as c, add_attribute as d, escape as e, missing_component as m, noop as n, setContext as s, validate_component as v };

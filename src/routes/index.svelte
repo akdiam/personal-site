@@ -6,10 +6,6 @@
 <script lang="ts">
 </script>
 
-<svelte:head>
-	<title>Home</title>
-</svelte:head>
-
 <section in:fade>
 	<p>
 		Hi! I'm Adam.
@@ -36,7 +32,7 @@
 		padding: 20px;
 		font-size: xx-large;
 	}
-	
+
 	a {
 		color: rgb(8, 177, 255);
 	}

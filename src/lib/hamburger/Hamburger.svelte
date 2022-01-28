@@ -1,8 +1,13 @@
 <script>
     import { fade } from 'svelte/transition';
+    import { theme } from '$lib/stores';
     export let isSidebarOpen;
     export let toggleSidebar;
 </script>
+
+<svelte:head>
+	<link rel="stylesheet" href={`theme/${$theme}.css`} />
+</svelte:head>
 
 <button in:fade out:fade class="menu" on:click={toggleSidebar} class:opened={isSidebarOpen}>
     <svg width="70" height="70" viewBox="0 0 100 100">
@@ -14,7 +19,8 @@
 
 <style>
     .menu {
-        background-color: rgb(54, 54, 54);
+        transition: background-color 0.3s;
+        background-color: var(--color-primary);
         border-radius: 50%;
         border: none;
         cursor: pointer;
@@ -27,7 +33,7 @@
 
     .line {
         fill: none;
-        stroke: #fdef2fe8;
+        stroke: var(--color-secondary);
         stroke-width: 3;
         transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);

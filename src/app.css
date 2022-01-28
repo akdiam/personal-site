@@ -10,8 +10,9 @@ body {
 }
 
 #svelte {
+	transition: background-color 0.3s;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: rgb(20, 20, 20);
+	background-color: var(--color-background);
 }
