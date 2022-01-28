@@ -14,9 +14,10 @@ const Spinner = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <div class="${"center svelte-qp7170"}"><div class="${"lds-ripple svelte-qp7170"}"><div class="${"svelte-qp7170"}"></div></div>
 </div>`;
 });
+var Hamburger_svelte_svelte_type_style_lang = "";
 var __layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: '.content.svelte-1l486y3{margin-left:250px;padding:0px 0px;height:100%;flex:1 0 auto;text-align:center}.content-header.svelte-1l486y3{position:sticky;top:0;background:rgb(54,54,54);color:white;padding:3px 8px;z-index:10}.content-header.svelte-1l486y3::after{content:"";position:absolute;left:0;background-color:rgba(161, 157, 157, 0);bottom:-50px;height:50px;width:25px;border-top-left-radius:20px;box-shadow:0 -25px 0 0 rgb(54,54,54)}.text.svelte-1l486y3{color:white;padding:25px}',
+  code: '.content.svelte-1u3uf1p.svelte-1u3uf1p{margin-left:250px;padding:0px 0px;height:100%;flex:1 0 auto;text-align:center}.content-header.svelte-1u3uf1p.svelte-1u3uf1p{position:sticky;top:0;background:rgb(54,54,54);color:white;padding:3px 8px;z-index:30;display:flex;flex-wrap:nowrap;align-items:center}.content-header.svelte-1u3uf1p h2.svelte-1u3uf1p{flex-grow:1}@media screen and (min-width: 850px){.content-header.svelte-1u3uf1p.svelte-1u3uf1p::after{content:"";position:absolute;left:0;background-color:rgba(161, 157, 157, 0);bottom:-50px;height:50px;width:25px;border-top-left-radius:20px;box-shadow:0 -25px 0 0 rgb(54,54,54)}.hamburger.svelte-1u3uf1p.svelte-1u3uf1p{display:none}}@media screen and (max-width: 850px){.content.svelte-1u3uf1p.svelte-1u3uf1p{margin:auto;padding:0px 0px;height:100%;flex:1 0 auto;text-align:center}}.text.svelte-1u3uf1p.svelte-1u3uf1p{color:white;padding:25px}',
   map: null
 };
 const _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {

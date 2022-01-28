@@ -6,6 +6,8 @@ const css = {
 };
 const Experiences = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<section class="${"svelte-1745evs"}"></section>`;
+  return `<section class="${"svelte-1745evs"}"><p>HIHIHIHIHHIIHIHIHI
+	</p>
+</section>`;
 });
 export { Experiences as default };

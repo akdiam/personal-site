@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let current;
 	export let toggleActive;
+	export let isSidebarOpen;
 
 	const gotoLinkedin = () => {
     	window.open('https://www.linkedin.com/in/adamkim23/', '_blank');
@@ -11,7 +12,7 @@
 	}
 </script>
 
-<div class="sidebar">
+<div class="sidebar" id="sidebar" class:expanded={isSidebarOpen}>
 	<div class="sidebar_links">
 		<a id="home" href="/" class:active={current === 'home'} on:click={toggleActive}>home</a>
 		<a id="experiences" href="/experiences" class:active={current === 'experiences'} on:click={toggleActive}>experiences</a>
@@ -45,6 +46,12 @@
 		flex-direction: column;
 	}
 
+	.expanded {
+		transition: ease-out 200ms;
+		width: 250px !important;
+		z-index: 20;
+	}
+	
 	.sidebar_links {
 		flex-grow: 1;
 		display: flex;
@@ -88,68 +95,16 @@
 		padding-bottom: 20px;
 	}
 
-	/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-	div.content {
-		margin-left: 250px;
-		padding: 0px 0px;
-		height: 100%;
-		flex: 1 0 auto;
-	}
-
-	.content .header {
-		position: sticky;
-		top: 0;
-		background: #363636;
-		color: white;
-		padding: 3px 8px;
-		z-index: 10;
-		text-align: center;
-		/*box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);*/
-	}
-
-	/* Cool CSS trick from https://itnext.io/how-to-make-a-fancy-inverted-border-radius-in-css-5db048a53f95 for inverted border radius on content headers */
-	.content .header::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		background-color: rgba(161, 157, 157, 0);
-		bottom: -50px;
-		height: 50px;
-		width: 25px;
-		border-top-left-radius: 20px;
-		box-shadow: 0 -25px 0 0 #363636; 
-	}
-
-	.content .header::before {
-		content: "";
-		position: absolute;
-		left: 0;
-		background-color: rgba(255, 17, 0, 0);
-		bottom: 61px;
-		height: 50px;
-		width: 25px;
-		border-bottom-left-radius: 20px;
-		box-shadow: 0 25px 0 0 #363636; 
-	}
-
-	/* On screens that are less than 700px wide, make the sidebar into a topbar */
+	/* On screens that are less than 850px wide, hide the sidebar */
 	@media screen and (max-width: 850px) {
 		.sidebar {
-		width: 100%;
-		height: auto;
-		position: fixed;
-		top: 0;
+			height: auto;
+			position: fixed;
+			top: 0;
+			width: 0;
+			transition: 0.5s;
 		}
 		.sidebar a {float: left;}
-		div.content {margin-left: 0;}
-	}
-	
-	/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-	@media screen and (max-width: 400px) {
-		.sidebar a {
-		text-align: center;
-		float: none;
-		}
 	}
 
 	.user_info {
