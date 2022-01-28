@@ -1,26 +1,48 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import '../app.css';
 	import Sidebar from '../lib/sidebar/Sidebar.svelte';
+	import Spinner from '../lib/spinner/Spinner.svelte';
 
-	let current = 'home'
+	const LAST_PAGE = 'last_page';
+	let current = null;
+
+	onMount(async () => {
+		await new Promise(res => setTimeout(res, 1500));
+		current = localStorage.getItem(LAST_PAGE);
+		if (current === null) {
+			current = 'home';
+		}
+	});
 
 	const toggleActive = (event) => {
+		console.log(current);
 		current = event.target.id;
+		localStorage.setItem(LAST_PAGE, current);
+		console.log(current);
 	}
 </script>
 
-<!-- Sidebar -->
-<Sidebar current={current} toggleActive={toggleActive}/>
+{#if current !== null}
+<div in:fade="{{duration: 800}}">
+	<!-- Sidebar -->
+	<Sidebar current={current} toggleActive={toggleActive}/>
 
-<!-- Page content-->
-<div class="content">
-	<div class="content-header" id="home-header">
-		<h2>{current}</h2>
-	</div>
-	<div class="text">
-		<slot></slot>
+	<!-- Page content-->
+	<div class="content">
+		<div class="content-header" id="home-header">
+			<h2>{current}</h2>
+		</div>
+		<div class="text">
+			<slot></slot>
+		</div>
 	</div>
 </div>
+
+{:else}
+	<Spinner />
+{/if}
 
 <style>
 	/* Page content. The value of the margin-left property should match the value of the sidebar's width property */

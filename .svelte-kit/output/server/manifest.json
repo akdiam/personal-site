@@ -1,0 +1,80 @@
+{
+  ".svelte-kit/build/app.js": {
+    "file": "app.js",
+    "src": ".svelte-kit/build/app.js",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ],
+    "css": [
+      "assets/entries/pages/__layout.svelte-7de91700.css"
+    ],
+    "assets": [
+      "assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2",
+      "assets/fira-mono-all-400-normal-0d19eb5d.woff",
+      "assets/fira-mono-cyrillic-400-normal-046b609f.woff2",
+      "assets/fira-mono-greek-ext-400-normal-8659ae46.woff2",
+      "assets/fira-mono-greek-400-normal-1f8b3a07.woff2",
+      "assets/fira-mono-latin-ext-400-normal-b6331a25.woff2",
+      "assets/fira-mono-latin-400-normal-a2f9dbe8.woff2",
+      "assets/headshot-2b0769e5.jpeg"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/pages/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-cd60aa08.css"
+    ]
+  },
+  "src/routes/experiences/index.svelte": {
+    "file": "entries/pages/experiences/index.svelte.js",
+    "src": "src/routes/experiences/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ],
+    "css": [
+      "assets/entries/pages/experiences/index.svelte-567d23eb.css"
+    ]
+  },
+  "src/routes/projects/index.svelte": {
+    "file": "entries/pages/projects/index.svelte.js",
+    "src": "src/routes/projects/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ]
+  },
+  "src/routes/etc/index.svelte": {
+    "file": "entries/pages/etc/index.svelte.js",
+    "src": "src/routes/etc/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2dc61825.js"
+    ]
+  },
+  "_index-2dc61825.js": {
+    "file": "chunks/index-2dc61825.js"
+  }
+}

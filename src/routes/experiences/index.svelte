@@ -1,7 +1,11 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 </script>
 
-<section>
+<section in:fade>
+	<p>
+		HIHIHIHIHHIIHIHIHI
+	</p>
 </section>
 
 <style>

@@ -162,7 +162,7 @@
 		background-position: center center;
 		background-size: cover;
 
-		background-image: url(../img/headshot.jpeg);
+		background-image: url(../../../static/img/headshot.jpeg);
 		border: 2px solid grey;
 	}
 
