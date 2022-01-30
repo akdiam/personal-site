@@ -76,4 +76,10 @@
     p {
         font-size: large;
     }
+    a {
+        
+    }
+    a:visited {
+
+    }
 </style>
