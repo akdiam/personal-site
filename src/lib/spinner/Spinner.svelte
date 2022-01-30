@@ -4,6 +4,7 @@
 </script>
 
 <div class="center" in:fade>
+    <p>Loading...</p>
     <div class="lds-ripple"><div></div></div>
 </div>
 
@@ -13,6 +14,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--color-secondary);
     }
     
     .lds-ripple {
@@ -23,10 +26,10 @@
     }
     .lds-ripple div {
         position: absolute;
-        border: 4px solid #fff;
+        border: 4px solid var(--color-secondary);
         opacity: 1;
         border-radius: 50%;
-        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        animation: lds-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     }
     .lds-ripple div:nth-child(2) {
         animation-delay: -0.5s;

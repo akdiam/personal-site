@@ -1,4 +1,9 @@
+<script>
+    import { fade } from 'svelte/transition';
+</script>
 
-<p>
-    I also enjoy making music with friends (I've played the double bass for ~11 years), listening to music, being active, and watching films.
-</p>
+<section in:fade>
+    <p>
+        Working on it!
+    </p>
+</section>

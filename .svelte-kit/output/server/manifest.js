@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set(["img/headshot.jpeg","svg/github.svg","svg/linkedin.svg","svg/spotify.svg","theme/dark.css","theme/light.css"]),
 	_: {
 		mime: {".jpeg":"image/jpeg",".svg":"image/svg+xml",".css":"text/css"},
-		entry: {"file":"start-9d92d7a7.js","js":["start-9d92d7a7.js","chunks/vendor-450bc166.js"],"css":[]},
+		entry: {"file":"start-8bf95f4b.js","js":["start-8bf95f4b.js","chunks/vendor-450bc166.js"],"css":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

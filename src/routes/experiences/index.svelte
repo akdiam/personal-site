@@ -3,9 +3,8 @@
 </script>
 
 <section in:fade>
-	<p>
-		HIHIHIHIHHIIHIHIHI
-	</p>
+	<p>Amazon &#183 Summer 2021 &#183 Internship</p>
+	<p>Invoice Maker LLC &#183 Winter 2021 &#183 Internship</p>
 </section>
 
 <style>
@@ -15,5 +14,8 @@
 		align-items: center;
 		flex: 1;
 		text-align: center;
+	}
+	p {
+		font-size: xx-large;
 	}
 </style>

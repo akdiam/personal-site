@@ -32,8 +32,4 @@
 		padding: 20px;
 		font-size: xx-large;
 	}
-
-	a {
-		color: rgb(8, 177, 255);
-	}
 </style>

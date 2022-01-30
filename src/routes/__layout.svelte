@@ -13,10 +13,10 @@
 	let isSidebarOpen = false;
 
 	onMount(async () => {
-		await new Promise(res => setTimeout(res, 1500));
-		const last_page = localStorage.getItem(LAST_PAGE);
 		const last_theme = localStorage.getItem(THEME);
 		theme.set(last_theme === null ? 'light' : last_theme);
+		await new Promise(res => setTimeout(res, 1500));
+		const last_page = localStorage.getItem(LAST_PAGE);
 		current = last_page === null ? 'home' : last_page;
 	});
 

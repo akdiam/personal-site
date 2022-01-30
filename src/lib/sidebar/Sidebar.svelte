@@ -33,7 +33,9 @@
 	<div class="sidebar_footer">
 		<div class="myname"><span>adam kim</span></div>
 		<div class="currently_playing"></div>
-		<div class="user_info" on:click={togglePalette}></div>
+		<div style="height: 170px; width: 170px; display: inline-block">
+			<div class="user_info" on:click={togglePalette}></div>
+		</div>
 		<div class="icons">
 			<img src="svg/linkedin.svg" alt="linkedin icon" height="40px" style="margin:10px" on:click={gotoLinkedin}>
 			<img src="svg/github.svg" alt="github icon" height="40px" style="margin:10px" on:click={gotoGithub}>
@@ -130,10 +132,12 @@
 
 	.user_info {
 		transition: background-color 0.3s;
+		transition: ease-in .15s;
 		display: inline-block;
 		width: 150px;
 		height: 150px;
 		border-radius: 50%;
+		align-items: center;
 	
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -141,6 +145,13 @@
 
 		background-image: url(../../../static/img/headshot.jpeg);
 		border: 2px solid var(--color-secondary);
+	}
+
+	.user_info:hover {
+		cursor: pointer;
+		width: 160px;
+		height: 160px;
+		transition: .15s ease-in;
 	}
 
 	.currently_playing {
@@ -162,7 +173,7 @@
 	}
 	
 	.icons {
-		padding: 20px;
+		padding: 0 20px 20px;
 	}
 
 	.icons img {
