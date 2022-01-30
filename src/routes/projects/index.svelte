@@ -17,7 +17,7 @@
             As the site evolved and I began thinking about how to keep it maintainable, I began to miss some of the luxuries offered by React: state-driven development; a pre-configured Node server baked into CRA (create react app) to locally serve your site; component-based architectures.
         </p>
         <p>
-            I also didn't want to use CRA for this, as I felt it was probably overkill for a personal site. SvelteKit seemed like a fun & lightweight tool that included all of the things mentioned above, so I tried it out. It's great! 
+            I also didn't want to use CRA for this, as I felt it was probably overkill for a personal site. SvelteKit seemed like a fun & lightweight tool that included all of the things mentioned above, so I tried it out. It's great.
         </p>
     </div>
     <div class="project">
@@ -77,7 +77,7 @@
         font-size: large;
     }
     a {
-        
+
     }
     a:visited {
 
