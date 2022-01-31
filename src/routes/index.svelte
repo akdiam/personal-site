@@ -29,7 +29,6 @@
 
 <style>
 	p {
-		padding: 20px;
 		font-size: xx-large;
 	}
 </style>
