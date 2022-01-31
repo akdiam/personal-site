@@ -33,7 +33,7 @@
 	<div class="sidebar_footer">
 		<div class="myname"><span>adam kim</span></div>
 		<div class="currently_playing"></div>
-		<div style="height: 170px; width: 170px; display: inline-block">
+		<div class="user_info_container">
 			<div class="user_info" on:click={togglePalette}></div>
 		</div>
 		<div class="icons">
@@ -82,10 +82,12 @@
 		padding: 30px;
 		text-decoration: none;
 		height: 20px;
+		transition: ease-in 0.15s !important;
 	}
 	
 	/* Active/current link */
 	.sidebar .sidebar_links a.active {
+		transition: ease-in-out 0.2s;
 		transition: background-color 0.3s;
 		background-color: var(--color-secondary);
 		color: black;
@@ -100,6 +102,7 @@
 	}
 
 	.sidebar .sidebar_links a:hover {
+		transition: ease-in 0.15s;
 		font-size: 120%;
 	}
 
@@ -127,7 +130,29 @@
 			width: 0;
 			transition: 0.5s;
 		}
+
 		.sidebar a {float: left;}
+
+		.user_info_container {
+			width: 120px !important;
+			height: 120px !important;
+		}
+
+		.user_info {
+			width: 100px !important;
+			height: 100px !important;
+		}
+
+		.user_info:hover {
+			width: 110px !important;
+			height: 110px !important;
+		}
+	}
+
+	.user_info_container {
+		width: 170px;
+		height: 170px;
+		display: inline-block;
 	}
 
 	.user_info {
