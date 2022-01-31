@@ -33,7 +33,7 @@
 	<div class="sidebar_footer">
 		<div class="myname"><span>adam kim</span></div>
 		<div class="currently_playing"></div>
-		<div style="height: 170px; width: 170px; display: inline-block">
+		<div class="user_info_container">
 			<div class="user_info" on:click={togglePalette}></div>
 		</div>
 		<div class="icons">
@@ -127,7 +127,29 @@
 			width: 0;
 			transition: 0.5s;
 		}
+
 		.sidebar a {float: left;}
+
+		.user_info_container {
+			width: 120px !important;
+			height: 120px !important;
+		}
+
+		.user_info {
+			width: 100px !important;
+			height: 100px !important;
+		}
+
+		.user_info:hover {
+			width: 110px !important;
+			height: 110px !important;
+		}
+	}
+
+	.user_info_container {
+		width: 170px;
+		height: 170px;
+		display: inline-block;
 	}
 
 	.user_info {
