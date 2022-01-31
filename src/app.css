@@ -1,7 +1,7 @@
-@import '@fontsource/fira-mono';
+@import '@fontsource/inria-sans';
 
 html {
-	font-family: monospace;
+	font-family: "Inria Sans";
 }
 
 body {

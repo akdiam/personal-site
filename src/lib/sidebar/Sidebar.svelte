@@ -82,10 +82,12 @@
 		padding: 30px;
 		text-decoration: none;
 		height: 20px;
+		transition: ease-in 0.15s !important;
 	}
 	
 	/* Active/current link */
 	.sidebar .sidebar_links a.active {
+		transition: ease-in-out 0.2s;
 		transition: background-color 0.3s;
 		background-color: var(--color-secondary);
 		color: black;
@@ -100,6 +102,7 @@
 	}
 
 	.sidebar .sidebar_links a:hover {
+		transition: ease-in 0.15s;
 		font-size: 120%;
 	}
 
