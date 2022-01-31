@@ -53,7 +53,7 @@
 		width: 250px;
 		background-color: var(--color-primary);
 		position: fixed;
-		min-height: 100%; 
+		height: 100%; 
 		overflow: auto;
 		text-align: center;
 		display: flex;
@@ -124,8 +124,6 @@
 	@media screen and (max-width: 850px) {
 		.sidebar {
 			transition: background-color 0.3s;
-			height: auto;
-			position: fixed;
 			top: 0;
 			width: 0;
 			transition: 0.5s;
@@ -146,6 +144,14 @@
 		.user_info:hover {
 			width: 110px !important;
 			height: 110px !important;
+		}
+
+		.myname {
+			display: none;
+		}
+
+		.footer {
+			display: none;
 		}
 	}
 
