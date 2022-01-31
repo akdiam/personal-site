@@ -11,6 +11,7 @@
 	const THEME = 'theme';
 	let current = null;
 	let isSidebarOpen = false;
+	let scrollYPos;
 
 	onMount(async () => {
 		const last_theme = localStorage.getItem(THEME);
@@ -37,6 +38,7 @@
 <svelte:head>
 	<link rel="stylesheet" href={`theme/${$theme}.css`} />
 </svelte:head>
+<svelte:window bind:scrollY={scrollYPos} />
 
 {#if current}
 	<div in:fade="{{duration: 800}}" class="background">
@@ -45,7 +47,7 @@
 
 		<!-- Page content-->
 		<div class="content">
-			<div class="content-header" id="home-header">
+			<div class="content-header" id="home-header" class:shadow={scrollYPos !== 0}>
 				<div class="hamburger">
 					<Hamburger isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar}></Hamburger>
 				</div>
@@ -85,6 +87,12 @@
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
+	}
+
+	.shadow {
+		-webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.4);
+		-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.4);
+		box-shadow: 0 3px 5px rgba(57, 63, 72, 0.4);
 	}
 
 	.content-header h2 {

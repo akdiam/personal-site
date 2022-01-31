@@ -78,7 +78,7 @@
 	/* Sidebar links */
 	.sidebar .sidebar_links a {
 		display: block;
-		color: white;
+		color: var(--text-primary);
 		padding: 30px;
 		text-decoration: none;
 		height: 20px;
@@ -90,7 +90,7 @@
 		transition: ease-in-out 0.2s;
 		transition: background-color 0.3s;
 		background-color: var(--color-secondary);
-		color: black;
+		color: var(--text-secondary);
 		outline: none;
 	}
 	
@@ -98,7 +98,6 @@
 	.sidebar .sidebar_links a:hover:not(.active) {
 		transition: background-color 0.3s;
 		background-color: var(--color-secondary-hover);
-		color: white;
 	}
 
 	.sidebar .sidebar_links a:hover {
