@@ -5,7 +5,7 @@ import { set_paths, assets, base } from '/Users/adamkim/Documents/personal_site_
 import { set_prerendering } from '/Users/adamkim/Documents/personal_site_svelte/.svelte-kit/runtime/env.js';
 import * as user_hooks from "../../src/hooks.ts";
 
-const template = ({ head, body, assets }) => "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<meta name=\"description\" content=\"Svelte demo app\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\t\t" + head + "\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">" + body + "</div>\n\t</body>\n</html>\n";
+const template = ({ head, body, assets }) => "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<meta name=\"description\" content=\"Svelte demo app\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\t\t<link href=\"../static/svg/fclef.svg\" rel=\"icon\" />\n\t\t" + head + "\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">" + body + "</div>\n\t</body>\n</html>\n";
 
 let read = null;
 

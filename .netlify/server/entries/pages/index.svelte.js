@@ -22,29 +22,27 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 __export(exports, {
-  default: () => Routes,
-  prerender: () => prerender
+  default: () => Routes
 });
-var import_index_08869495 = __toModule(require("../../chunks/index-08869495.js"));
+var import_index_54ee5aaa = __toModule(require("../../chunks/index-54ee5aaa.js"));
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "p.svelte-1o517n3{padding:20px;font-size:xx-large}",
+  code: "p.svelte-1rk2txf{font-size:xx-large}",
   map: null
 };
-const prerender = true;
-const Routes = (0, import_index_08869495.c)(($$result, $$props, $$bindings, slots) => {
+const Routes = (0, import_index_54ee5aaa.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<section><p class="${"svelte-1o517n3"}">Hi! I&#39;m Adam.
+  return `<section><p class="${"svelte-1rk2txf"}">Hi! I&#39;m Adam.
 	</p>
-	<p class="${"svelte-1o517n3"}">I&#39;m a <strong>senior</strong> at the University of Michigan studying <strong>computer science</strong>.
+	<p class="${"svelte-1rk2txf"}">I&#39;m a <strong>senior</strong> at the University of Michigan studying <strong>computer science</strong>.
 	</p>
-	<p class="${"svelte-1o517n3"}">I&#39;m interested in <strong>modern web development</strong>.
+	<p class="${"svelte-1rk2txf"}">I&#39;m interested in <strong>modern web development</strong>.
 	</p>
-	<p class="${"svelte-1o517n3"}">My goals are to build <i>clean, maintainable,</i> and <i>extensible</i> software that works.
+	<p class="${"svelte-1rk2txf"}">My goals are to build <i>clean, maintainable,</i> and <i>extensible</i> software that works.
 	</p>
-	<p class="${"svelte-1o517n3"}">If you&#39;re interested in my experiences, here&#39;s <a href="${"someresume"}">my resume</a>.
+	<p class="${"svelte-1rk2txf"}">If you&#39;re interested in my experiences, here&#39;s <a href="${"someresume"}">my resume</a>.
 	</p>
-	<p class="${"svelte-1o517n3"}">If you&#39;d like to get in touch, please <a href="${"mailto:adamkkim00@gmail.com"}">email me</a> at adamkkim00@gmail.com :)
+	<p class="${"svelte-1rk2txf"}">If you&#39;d like to get in touch, please <a href="${"mailto:adamkkim00@gmail.com"}">email me</a> at adamkkim00@gmail.com :)
 	</p>
 </section>`;
 });

@@ -24,13 +24,13 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Experiences
 });
-var import_index_08869495 = __toModule(require("../../../chunks/index-08869495.js"));
+var import_index_54ee5aaa = __toModule(require("../../../chunks/index-54ee5aaa.js"));
 var index_svelte_svelte_type_style_lang = "";
 const css = {
   code: "section.svelte-bljz9i{display:flex;flex-direction:column;align-items:center;flex:1;text-align:center}p.svelte-bljz9i{font-size:xx-large}",
   map: null
 };
-const Experiences = (0, import_index_08869495.c)(($$result, $$props, $$bindings, slots) => {
+const Experiences = (0, import_index_54ee5aaa.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `<section class="${"svelte-bljz9i"}"><p class="${"svelte-bljz9i"}">Amazon \xB7 Summer 2021 \xB7 Internship</p>
 	<p class="${"svelte-bljz9i"}">Invoice Maker LLC \xB7 Winter 2021 \xB7 Internship</p>

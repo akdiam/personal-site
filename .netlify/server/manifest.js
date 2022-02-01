@@ -26,10 +26,10 @@ __export(exports, {
 });
 const manifest = {
   appDir: "_app",
-  assets: new Set(["img/headshot.jpeg", "svg/github.svg", "svg/linkedin.svg", "svg/spotify.svg", "theme/dark.css", "theme/light.css"]),
+  assets: new Set(["img/headshot.jpeg", "svg/fclef.svg", "svg/github.svg", "svg/linkedin.svg", "svg/spotify.svg", "theme/dark.css", "theme/light.css"]),
   _: {
     mime: { ".jpeg": "image/jpeg", ".svg": "image/svg+xml", ".css": "text/css" },
-    entry: { "file": "start-86758c05.js", "js": ["start-86758c05.js", "chunks/vendor-450bc166.js"], "css": [] },
+    entry: { "file": "start-c89cb113.js", "js": ["start-c89cb113.js", "chunks/vendor-8221285c.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toModule(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toModule(require("./nodes/1.js"))),

@@ -4,7 +4,7 @@
     "src": ".svelte-kit/build/app.js",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -12,19 +12,15 @@
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-8873e423.css"
+      "assets/entries/pages/__layout.svelte-181dd9f4.css"
     ],
     "assets": [
-      "assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2",
-      "assets/fira-mono-all-400-normal-0d19eb5d.woff",
-      "assets/fira-mono-cyrillic-400-normal-046b609f.woff2",
-      "assets/fira-mono-greek-ext-400-normal-8659ae46.woff2",
-      "assets/fira-mono-greek-400-normal-1f8b3a07.woff2",
-      "assets/fira-mono-latin-ext-400-normal-b6331a25.woff2",
-      "assets/fira-mono-latin-400-normal-a2f9dbe8.woff2",
+      "assets/inria-sans-latin-ext-400-normal-dfc31ee2.woff2",
+      "assets/inria-sans-all-400-normal-ac3a51fb.woff",
+      "assets/inria-sans-latin-400-normal-7a27c7fd.woff2",
       "assets/headshot-2b0769e5.jpeg"
     ]
   },
@@ -33,7 +29,7 @@
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ]
   },
   "src/routes/index.svelte": {
@@ -41,10 +37,10 @@
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-cd60aa08.css"
+      "assets/entries/pages/index.svelte-cbaa0727.css"
     ]
   },
   "src/routes/experiences/index.svelte": {
@@ -52,7 +48,7 @@
     "src": "src/routes/experiences/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ],
     "css": [
       "assets/entries/pages/experiences/index.svelte-b85f3b0a.css"
@@ -63,10 +59,10 @@
     "src": "src/routes/projects/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ],
     "css": [
-      "assets/entries/pages/projects/index.svelte-c7c85f9f.css"
+      "assets/entries/pages/projects/index.svelte-e35fd09d.css"
     ]
   },
   "src/routes/etc/index.svelte": {
@@ -74,10 +70,10 @@
     "src": "src/routes/etc/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-08869495.js"
+      "_index-54ee5aaa.js"
     ]
   },
-  "_index-08869495.js": {
-    "file": "chunks/index-08869495.js"
+  "_index-54ee5aaa.js": {
+    "file": "chunks/index-54ee5aaa.js"
   }
 }

@@ -1,9 +1,5 @@
 <script context="module" lang="ts">
-	export const prerender = true;
 	import { fade } from 'svelte/transition';
-</script>
-
-<script lang="ts">
 </script>
 
 <section in:fade>
