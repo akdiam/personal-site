@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { theme } from '$lib/stores';
-	export let current;
-	export let toggleActive;
 	export let isSidebarOpen;
+	export let current;
 
 	const gotoLinkedin = () => {
     	window.open('https://www.linkedin.com/in/adamkim23/', '_blank');
@@ -25,10 +24,10 @@
 
 <div class="sidebar" id="sidebar" class:expanded={isSidebarOpen}>
 	<div class="sidebar_links">
-		<a id="home" href="/" class:active={current === 'home'} on:click={toggleActive}>home</a>
-		<a id="experiences" href="/experiences" class:active={current === 'experiences'} on:click={toggleActive}>experiences</a>
-		<a id="projects" href="/projects" class:active={current === 'projects'} on:click={toggleActive}>projects</a>
-		<a id="etc" href="/etc" class:active={current === 'etc'} on:click={toggleActive}>etc</a>
+		<a id="home" href="/" class:active={current === 'home'}>home</a>
+		<a id="experiences" href="/experiences" class:active={current === 'experiences'}>experiences</a>
+		<a id="projects" href="/projects" class:active={current === 'projects'}>projects</a>
+		<a id="etc" href="/etc" class:active={current === 'etc'}>etc</a>
 	</div>
 	<div class="sidebar_footer">
 		<div class="myname"><span>adam kim</span></div>
@@ -119,17 +118,7 @@
 		color: var(--text-primary);
 	}
 
-	/* On screens that are less than 850px wide, hide the sidebar */
-	@media screen and (max-width: 850px) {
-		.sidebar {
-			transition: background-color 0.3s;
-			top: 0;
-			width: 0;
-			transition: 0.5s;
-		}
-
-		.sidebar a {float: left;}
-
+	@media screen and (max-height: 760px) and (max-width: 850px) {
 		.user_info_container {
 			width: 120px !important;
 			height: 120px !important;
@@ -152,6 +141,51 @@
 		.footer {
 			display: none;
 		}
+	}
+
+	@media screen and (max-height: 650px) {
+		.user_info_container {
+			display: none !important;
+		}
+		
+		.user_info {
+			display: none !important;
+		}
+	}
+
+	/* On screens that are less than 850px wide, hide the sidebar */
+	@media screen and (max-width: 850px) {
+		.sidebar {
+			transition: background-color 0.3s;
+			top: 0;
+			width: 0;
+			transition: 0.5s;
+		}
+
+		.sidebar a {float: left;}
+
+		/*.user_info_container {
+			width: 120px !important;
+			height: 120px !important;
+		}
+
+		.user_info {
+			width: 100px !important;
+			height: 100px !important;
+		}
+
+		.user_info:hover {
+			width: 110px !important;
+			height: 110px !important;
+		}
+
+		.myname {
+			display: none;
+		}
+
+		.footer {
+			display: none;
+		}*/
 	}
 
 	.user_info_container {

@@ -2,29 +2,23 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { theme } from '$lib/stores';
+	import { page } from '$app/stores';
 	import '../app.css';
 	import Sidebar from '../lib/sidebar/Sidebar.svelte';
 	import Spinner from '../lib/spinner/Spinner.svelte';
 	import Hamburger from '../lib/hamburger/Hamburger.svelte';
 
-	const LAST_PAGE = 'last_page';
 	const THEME = 'theme';
-	let current = null;
 	let isSidebarOpen = false;
 	let scrollYPos;
+	let current = null;
+	let isLoading = true;
 
 	onMount(async () => {
 		const last_theme = localStorage.getItem(THEME);
 		theme.set(last_theme === null ? 'light' : last_theme);
-		await new Promise(res => setTimeout(res, 1500));
-		const last_page = localStorage.getItem(LAST_PAGE);
-		current = last_page === null ? 'home' : last_page;
+		await new Promise(res => setTimeout(() => isLoading = false, 1500));
 	});
-
-	const toggleActive = (event) => {
-		current = event.target.id;
-		localStorage.setItem(LAST_PAGE, current);
-	}
 
 	const toggleSidebar = () => {
 		isSidebarOpen = !isSidebarOpen;
@@ -33,17 +27,37 @@
 	const closeSidebar = () => {
 		isSidebarOpen = false;
 	}
+
+	$: {
+		switch ($page.url.pathname) {
+			case '/':
+				current = 'home';
+				break;
+			case '/experiences':
+				current = 'experiences';
+				break;
+			case '/projects':
+				current = 'projects';
+				break;
+			case '/etc':
+				current = 'etc';
+				break;
+			default:
+				console.log('unknown page');
+		}
+	}
 </script>
 
 <svelte:head>
 	<link rel="stylesheet" href={`theme/${$theme}.css`} />
+	<title>Adam Kim</title>
 </svelte:head>
 <svelte:window bind:scrollY={scrollYPos} />
 
-{#if current}
+{#if !isLoading}
 	<div in:fade="{{duration: 800}}" class="background">
 		<!-- Sidebar -->
-		<Sidebar current={current} toggleActive={toggleActive} isSidebarOpen={isSidebarOpen}/>
+		<Sidebar isSidebarOpen={isSidebarOpen} current={current}/>
 
 		<!-- Page content-->
 		<div class="content">
