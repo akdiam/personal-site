@@ -27,7 +27,7 @@
 		<a id="home" href="/" class:active={current === 'home'}>home</a>
 		<a id="experiences" href="/experiences" class:active={current === 'experiences'}>experiences</a>
 		<a id="projects" href="/projects" class:active={current === 'projects'}>projects</a>
-		<a id="etc" href="/etc" class:active={current === 'etc'}>etc</a>
+		<a id="wpm" href="/wpm" class:active={current === 'wpm'}>wpm</a>
 	</div>
 	<div class="sidebar_footer">
 		<div class="myname"><span>adam kim</span></div>
@@ -134,16 +134,12 @@
 			height: 110px !important;
 		}
 
-		.myname {
-			display: none;
-		}
-
 		.footer {
 			display: none;
 		}
 	}
 
-	@media screen and (max-height: 650px) {
+	@media screen and (max-height: 750px) {
 		.user_info_container {
 			display: none !important;
 		}
@@ -163,29 +159,6 @@
 		}
 
 		.sidebar a {float: left;}
-
-		/*.user_info_container {
-			width: 120px !important;
-			height: 120px !important;
-		}
-
-		.user_info {
-			width: 100px !important;
-			height: 100px !important;
-		}
-
-		.user_info:hover {
-			width: 110px !important;
-			height: 110px !important;
-		}
-
-		.myname {
-			display: none;
-		}
-
-		.footer {
-			display: none;
-		}*/
 	}
 
 	.user_info_container {
