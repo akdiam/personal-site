@@ -73,6 +73,17 @@
       "_index-54ee5aaa.js"
     ]
   },
+  "src/routes/wpm/index.svelte": {
+    "file": "entries/pages/wpm/index.svelte.js",
+    "src": "src/routes/wpm/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-54ee5aaa.js"
+    ],
+    "css": [
+      "assets/entries/pages/wpm/index.svelte-4eeedac8.css"
+    ]
+  },
   "_index-54ee5aaa.js": {
     "file": "chunks/index-54ee5aaa.js"
   }

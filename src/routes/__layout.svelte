@@ -29,21 +29,11 @@
 	}
 
 	$: {
-		switch ($page.url.pathname) {
-			case '/':
-				current = 'home';
-				break;
-			case '/experiences':
-				current = 'experiences';
-				break;
-			case '/projects':
-				current = 'projects';
-				break;
-			case '/etc':
-				current = 'etc';
-				break;
-			default:
-				console.log('unknown page');
+		let curr_page = $page.url.pathname
+		if (curr_page === '/') {
+			current = 'home'
+		} else {
+			current = curr_page.replace('/', '')
 		}
 	}
 </script>
@@ -104,9 +94,9 @@
 	}
 
 	.shadow {
-		-webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.4);
-		-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.4);
-		box-shadow: 0 3px 5px rgba(57, 63, 72, 0.4);
+		-webkit-box-shadow: 0 3px 5px var(--header-shadow);
+		-moz-box-shadow: 0 3px 5px var(--header-shadow);
+		box-shadow: 0 3px 5px var(--header-shadow);
 	}
 
 	.content-header h2 {
@@ -148,7 +138,7 @@
 
 	.text {
 		transition: background-color 0.3s;
-		color: var(--text-secondary);
+		color: var(--text-primary);
 		padding: 25px;
 	}
 </style>

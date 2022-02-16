@@ -1,9 +1,22 @@
 :root {
-    --color-primary: rgb(11, 65, 65);
+    --color-primary: #0093dd;
     --color-primary-transparent: rgba(49, 255, 255, 0);
-    --color-secondary: rgb(255, 104, 100);
-    --color-secondary-hover: rgba(255, 105, 100, 0.562);
-    --color-background: #FAF0DC;
-    --text-primary: #FAF0DC;
+    --color-secondary: /*rgb(210, 87, 255);*/rgb(255, 242, 58);
+    --color-secondary-hover: rgba(255, 242, 58, 0.562);
+    --color-background: #d83d3d;
+    --text-primary: white;
     --text-secondary: rgb(0, 0, 0);
+
+    --incorrect: rgb(219, 80, 80);
+    --correct: rgb(117, 255, 117);
+    --unfinished: white;
+
+    --card: #0093dd;
+    --card-secondary: #00679b;
+
+    --border-radius: 10px;
+
+    --header-shadow: rgba(57, 63, 72, 0.4);
+
+    --wpm-text: white;
 }

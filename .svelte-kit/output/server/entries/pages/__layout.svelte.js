@@ -96,19 +96,12 @@ const _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   {
     {
-      switch ($page.url.pathname) {
-        case "/":
-          break;
-        case "/experiences":
-          break;
-        case "/projects":
-          break;
-        case "/etc":
-          break;
-        default:
-          console.log("unknown page");
+      let curr_page = $page.url.pathname;
+      if (curr_page === "/")
+        ;
+      else {
+        curr_page.replace("/", "");
       }
-      console.log($page.url.pathname);
     }
   }
   $$unsubscribe_page();
