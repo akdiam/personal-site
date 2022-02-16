@@ -40,7 +40,7 @@
     </div>
     <div class="rhs">
         <div class="refresh-container">
-            <img class="refresh" src="../../../static/svg/refresh.svg" alt="refresh" on:click={restartTest} />
+            <img class="refresh" src="../../../../static/svg/refresh.svg" alt="refresh" on:click={restartTest} />
         </div>
     </div>
 </div>

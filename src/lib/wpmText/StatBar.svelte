@@ -25,7 +25,7 @@
     </span>
     <span class="time">
         <div class="refresh-container">
-            <img class="refresh" src="../../../static/svg/refresh.svg" alt="refresh" on:click={restartTest} />
+            <img class="refresh" src="../../../../static/svg/refresh.svg" alt="refresh" on:click={restartTest} />
         </div>
         <div class="elapsed-time">
             <ElapsedTime elapsedTime={totalTime} />
