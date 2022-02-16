@@ -1,9 +1,0 @@
-:root {
-    --color-primary: rgb(39, 0, 130);
-    --color-primary-transparent: rgb(39, 0, 130, 0);
-    --color-secondary: rgb(193, 95, 253);
-    --color-secondary-hover: rgb(193, 95, 253, .5);
-    --color-background: #1A1A40;
-    --text-primary: white;
-    --text-secondary: white;
-}
