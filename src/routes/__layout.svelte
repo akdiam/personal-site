@@ -10,7 +10,6 @@
 
 	const THEME = 'theme';
 	let isSidebarOpen = false;
-	let scrollYPos;
 	let current = null;
 	let isLoading = true;
 
@@ -42,7 +41,6 @@
 	<link rel="stylesheet" href={`theme/${$theme}.css`} />
 	<title>Adam Kim</title>
 </svelte:head>
-<svelte:window bind:scrollY={scrollYPos} />
 
 {#if !isLoading}
 	<div in:fade="{{duration: 800}}" class="background">
@@ -51,7 +49,7 @@
 
 		<!-- Page content-->
 		<div class="content">
-			<div class="content-header" id="home-header" class:shadow={scrollYPos !== 0}>
+			<div class="content-header" id="home-header">
 				<div class="hamburger">
 					<Hamburger isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar}></Hamburger>
 				</div>

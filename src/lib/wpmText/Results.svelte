@@ -40,7 +40,7 @@
     </div>
     <div class="rhs">
         <div class="refresh-container">
-            <img class="refresh" src="../../../../static/svg/refresh.svg" alt="refresh" on:click={restartTest} />
+            <img class="refresh" src="svg/refresh.svg" alt="refresh" on:click={restartTest} />
         </div>
     </div>
 </div>
@@ -77,7 +77,7 @@
         height: 90px;
         width: 90px;
         display: flex;
-        align-items: center;
+        align-items: center;    
         justify-content: center;
         padding: 10px;
         background-color: var(--card-secondary);
@@ -92,9 +92,8 @@
     }
 
     .refresh:hover {
-        height: 75px;
-        width: 75px;
-        transition: ease-in 100ms;
+        transition: all 0.2s;
+        transform: rotate(90deg);
         cursor: pointer;
     }
 
@@ -112,11 +111,6 @@
         .refresh {
             height: 30px;
             width: 30px;
-        }
-
-        .refresh:hover {
-            height: 33px;
-            width: 33px;
         }
     }
 

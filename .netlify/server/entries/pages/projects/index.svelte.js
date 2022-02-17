@@ -24,13 +24,13 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Projects
 });
-var import_index_54ee5aaa = __toModule(require("../../../chunks/index-54ee5aaa.js"));
+var import_index_4ef0e261 = __toModule(require("../../../chunks/index-4ef0e261.js"));
 var index_svelte_svelte_type_style_lang = "";
 const css = {
   code: "section.svelte-7kkluf{padding:30px}.project.svelte-7kkluf{margin-bottom:80px}h2.svelte-7kkluf{font-size:xx-large}span.svelte-7kkluf{font-size:large}p.svelte-7kkluf{font-size:large}",
   map: null
 };
-const Projects = (0, import_index_54ee5aaa.c)(($$result, $$props, $$bindings, slots) => {
+const Projects = (0, import_index_4ef0e261.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `<section class="${"svelte-7kkluf"}"><div class="${"project svelte-7kkluf"}"><h2 class="${"svelte-7kkluf"}">Personal Site
             <i><span class="${"svelte-7kkluf"}">\xB7 Svelte</span></i>
