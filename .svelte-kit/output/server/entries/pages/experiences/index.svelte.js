@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "../../../chunks/index-54ee5aaa.js";
+import { c as create_ssr_component } from "../../../chunks/index-4ef0e261.js";
 var index_svelte_svelte_type_style_lang = "";
 const css = {
   code: "section.svelte-bljz9i{display:flex;flex-direction:column;align-items:center;flex:1;text-align:center}p.svelte-bljz9i{font-size:xx-large}",

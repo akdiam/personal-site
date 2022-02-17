@@ -25,7 +25,7 @@
     </span>
     <span class="time">
         <div class="refresh-container">
-            <img class="refresh" src="../../../../static/svg/refresh.svg" alt="refresh" on:click={restartTest} />
+            <img class="refresh" src="svg/refresh.svg" alt="refresh" on:click={restartTest} />
         </div>
         <div class="elapsed-time">
             <ElapsedTime elapsedTime={totalTime} />
@@ -97,9 +97,8 @@
     }
 
     .refresh:hover {
-        height: 55px;
-        width: 55px;
-        transition: ease-in 100ms;
+        transform: rotate(90deg);
+        transition: all 0.2s;
         cursor: pointer;
     }
 

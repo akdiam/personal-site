@@ -24,13 +24,13 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Routes
 });
-var import_index_54ee5aaa = __toModule(require("../../chunks/index-54ee5aaa.js"));
+var import_index_4ef0e261 = __toModule(require("../../chunks/index-4ef0e261.js"));
 var index_svelte_svelte_type_style_lang = "";
 const css = {
   code: "p.svelte-1rk2txf{font-size:xx-large}",
   map: null
 };
-const Routes = (0, import_index_54ee5aaa.c)(($$result, $$props, $$bindings, slots) => {
+const Routes = (0, import_index_4ef0e261.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `<section><p class="${"svelte-1rk2txf"}">Hi! I&#39;m Adam.
 	</p>

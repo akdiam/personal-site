@@ -24,8 +24,8 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Etc
 });
-var import_index_54ee5aaa = __toModule(require("../../../chunks/index-54ee5aaa.js"));
-const Etc = (0, import_index_54ee5aaa.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_4ef0e261 = __toModule(require("../../../chunks/index-4ef0e261.js"));
+const Etc = (0, import_index_4ef0e261.c)(($$result, $$props, $$bindings, slots) => {
   return `<section><p>Working on it!
     </p></section>`;
 });

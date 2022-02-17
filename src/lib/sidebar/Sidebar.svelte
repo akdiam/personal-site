@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { theme } from '$lib/stores';
+	import ActionRow from './ActionRow.svelte';
 	export let isSidebarOpen;
 	export let current;
 
@@ -30,16 +31,17 @@
 		<a id="wpm" href="/wpm" class:active={current === 'wpm'}>wpm</a>
 	</div>
 	<div class="sidebar_footer">
-		<div class="myname"><span>adam kim</span></div>
 		<div class="currently_playing"></div>
+		<ActionRow />
 		<div class="user_info_container">
-			<div class="user_info" on:click={togglePalette}></div>
+			<div class="user_info"></div>
 		</div>
-		<div class="icons">
+		<!--<div class="icons">
 			<img src="svg/linkedin.svg" alt="linkedin icon" height="40px" style="margin:10px" on:click={gotoLinkedin}>
 			<img src="svg/github.svg" alt="github icon" height="40px" style="margin:10px" on:click={gotoGithub}>
-		</div>
-		<div class="footer"><span>2022</span></div>
+		</div>-->
+		<hr>
+		<div class="footer"><span>Adam Kim - 2022</span></div>
 	</div>
 </div>
 
@@ -113,12 +115,21 @@
 		padding-bottom: 20px;
 	}
 
-	.myname, .footer {
+	.footer {
 		transition: background-color 0.3s;
-		color: var(--text-primary);
+		color: var(--footer);
+		text-align: center;
+		padding-top: 10px;
 	}
 
-	@media screen and (max-height: 760px) and (max-width: 850px) {
+	hr {
+		background: var(--footer);
+		background-color: var(--footer);
+		height: 1px;
+		border: 0;
+	}
+
+	@media screen and (max-height: 780px) and (max-width: 850px) {
 		.user_info_container {
 			width: 120px !important;
 			height: 120px !important;
@@ -133,13 +144,9 @@
 			width: 110px !important;
 			height: 110px !important;
 		}
-
-		.footer {
-			display: none;
-		}
 	}
 
-	@media screen and (max-height: 750px) {
+	@media screen and (max-height: 780px) {
 		.user_info_container {
 			display: none !important;
 		}
@@ -162,8 +169,9 @@
 	}
 
 	.user_info_container {
-		width: 170px;
-		height: 170px;
+		width: 150px;
+		height: 150px;
+		margin-bottom: 20px;
 		display: inline-block;
 	}
 
@@ -184,13 +192,6 @@
 		border: 2px solid var(--color-secondary);
 	}
 
-	.user_info:hover {
-		cursor: pointer;
-		width: 160px;
-		height: 160px;
-		transition: .15s ease-in;
-	}
-
 	.currently_playing {
 		padding-bottom: 20px;
 		padding-left: 10px;
@@ -207,13 +208,5 @@
 
 	.sidebar .currently_playing a:visited {
 		color:rgb(230, 130, 255)
-	}
-	
-	.icons {
-		padding: 0 20px 20px;
-	}
-
-	.icons img {
-		cursor: pointer;
 	}
 </style>
