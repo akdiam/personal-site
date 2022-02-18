@@ -16,7 +16,7 @@
 		My goals are to build <i>clean, maintainable,</i> and <i>extensible</i> software that works.
 	</p>
 	<p>
-		If you're interested in my experiences, here's <a href="someresume">my resume</a>.
+		If you're interested in my experiences, here's <a href="/resume">my resume</a>.
 	</p>
 	<p>
 		If you'd like to get in touch, please <a href="mailto:adamkkim00@gmail.com">email me</a> at adamkkim00@gmail.com :)
