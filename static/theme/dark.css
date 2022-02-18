@@ -5,11 +5,13 @@
     --color-secondary-hover: rgba(255, 242, 58, 0.562);
     --color-background: rgb(22, 22, 22);
     --color-background-transparent: rgba(22, 22, 22, 0.562);
+    --background-text: rgb(105, 105, 105);
     --text-primary: white;
     --text-secondary: black;
 
-    --incorrect: rgb(219, 80, 80);
-    --correct: rgb(116, 204, 116);
+    --incorrect: rgb(255, 9, 9);
+    --incorrect-transparent: rgba(255, 9, 9, 0.5);
+    --correct: rgb(0, 202, 0);
     --unfinished: white;
 
     --card: #272727;

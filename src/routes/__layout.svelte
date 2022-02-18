@@ -16,7 +16,7 @@
 	onMount(async () => {
 		const last_theme = localStorage.getItem(THEME);
 		theme.set(last_theme === null ? 'light' : last_theme);
-		await new Promise(res => setTimeout(() => isLoading = false, 1500));
+		await new Promise(res => setTimeout(() => isLoading = false, 400));
 	});
 
 	const toggleSidebar = () => {

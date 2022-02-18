@@ -7,21 +7,27 @@
 {#each allTextArray as word, i}
     <div class="word">
         {#each word as charObj, j}
-            {#if i === currentWordIndex && j === currentCharIndex && charObj.char !== ' '}
-                {#if charObj.status === 'correct'}
-                    <span class="char correct blink-before">{charObj.char}</span>
-                {:else if charObj.status === 'incorrect'}
-                    <span class="char incorrect blink-before">{charObj.char}</span>
-                {:else if charObj.status === 'unfinished'}
+            {#if i === currentWordIndex && j === currentCharIndex}
+                {#if charObj.char === ' '}
+                    <span class="blink-before-space">&nbsp;</span>
+                {:else}
                     <span class="char unfinished blink-before">{charObj.char}</span>
                 {/if}
             {:else}
-                {#if charObj.status === 'correct'}
-                    <span class="char correct">{charObj.char}</span>
-                {:else if charObj.status === 'incorrect'}
-                    <span class="char incorrect">{charObj.char}</span>
-                {:else if charObj.status === 'unfinished'}
-                    <span class="char unfinished">{charObj.char}</span>
+                {#if charObj.char === ' '}
+                    {#if charObj.status === 'incorrect'}
+                        <span class="char incorrect-space">&nbsp;</span>
+                    {:else}
+                        <span class="char">&nbsp;</span>
+                    {/if}
+                {:else}
+                    {#if charObj.status === 'correct'}
+                        <span class="char correct">{charObj.char}</span>
+                    {:else if charObj.status === 'incorrect'}
+                        <span class="char incorrect">{charObj.char}</span>
+                    {:else if charObj.status === 'unfinished'}
+                        <span class="char unfinished">{charObj.char}</span>
+                    {/if}
                 {/if}
             {/if}
         {/each}
@@ -32,7 +38,7 @@
     .word {
         margin: 0.27rem;
         border-bottom: 2px solid transparent;
-        line-height: 2rem;
+        line-height: 2.2rem;
     }
 
     .char {
@@ -40,10 +46,11 @@
         border-bottom-width: 0.05em;
         border-bottom-color: transparent;
         display: inline-block;
+        font-weight: 900;
     }
 
     span {
-        font-size: 30px;   
+        font-size: 35px;   
     }
 
     .correct {
@@ -54,14 +61,26 @@
         color: var(--incorrect);
     }
 
+    .incorrect-space {
+        background-color: var(--incorrect-transparent);
+    }
+
     .unfinished {
         color: var(--unfinished);
     }
 
-    .blink-before::before {
+    :global(.blink-before::before) {
         content: "";
         width: 3px;
-        height: 35px;
+        background: #ffffff;
+        position: absolute;
+        border-radius: 5px;
+    }
+
+    .blink-before-space::before {
+        content: "\00a0 ";
+        width: 3px;
+        height: 40px;
         background: #ffffff;
         position: absolute;
         border-radius: 5px;

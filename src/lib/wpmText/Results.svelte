@@ -13,25 +13,25 @@
     <div class="data-container">
         <div class="result">
             <div class="result-title">
-                Net WPM
+                net wpm
             </div>
             <span class="result-data">{netWpm}</span>
         </div>
         <div class="result">
             <div class="result-title">
-                Gross WPM
+                gross wpm
             </div>
             <span class="result-data">{grossWpm}</span>
         </div>
         <div class="result">
             <div class="result-title">
-                Accuracy
+                accuracy
             </div>
             <span class="result-data">{accuracy}%</span>
         </div>
         <div class="result">
             <div class="result-title">
-                Time Spent
+                time spent
             </div>
             <span class="result-data">
                 <ElapsedTime elapsedTime={totalTime} />

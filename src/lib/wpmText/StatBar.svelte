@@ -6,26 +6,44 @@
     export let totalTime;
     export let isRaceOngoing;
     export let restartTest;
+
+    const openWpmHelp = () => {
+        window.open('https://www.speedtypingonline.com/typing-equations', '_blank');
+    }
+
+    const enterRestartTest = (e) => {
+        if (e.key === "Enter") {
+            restartTest()
+            document.getElementById('blur').focus()
+        }
+    }
 </script>
 
 <div class="stats">
     <span class="wpm">
         <div class="net">
             <div class="title">
-                Net WPM
+                net wpm
             </div>
             {netWpm}
         </div>
         <div class="gross">
             <div class="title">
-                Gross WPM
+                gross wpm
             </div>
             {grossWpm}
         </div>
+        <div class="help-container" on:click={openWpmHelp}>
+            <img class="help" src="svg/question-circle.svg" alt="question-circle" />
+        </div>
     </span>
     <span class="time">
-        <div class="refresh-container">
-            <img class="refresh" src="svg/refresh.svg" alt="refresh" on:click={restartTest} />
+        <div class="refresh-container" on:click={restartTest} on:keydown={enterRestartTest} tabindex="2">
+            <img class="refresh"
+                src="svg/refresh.svg" 
+                alt="refresh" 
+            />
+            <span class="refresh-tooltip">restart</span>
         </div>
         <div class="elapsed-time">
             <ElapsedTime elapsedTime={totalTime} />
@@ -67,6 +85,32 @@
         font-size: 40px;
     }
 
+    .help-container {
+        background-color: var(--card-secondary);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto 0;
+    }
+
+    .help-container:hover {
+        cursor: pointer;
+    }
+
+    .help {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 420px) {
+        .help-container {
+            display: none;
+        }
+    }
+
     .title {
         font-size: small;
         color: var(--color-secondary);
@@ -87,6 +131,31 @@
         padding: 10px;
         background-color: var(--card-secondary);
         border-radius: 50%;
+        position: relative;
+        outline: none;
+    }
+
+    .refresh-container .refresh-tooltip {
+        visibility: hidden;
+        background-color: var(--card-secondary);
+        color: var(--color-secondary);
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+        top: 22px;
+        right: 108%;
+    }
+
+    .refresh-container:hover .refresh-tooltip {
+        visibility: visible;
+    }
+
+    .refresh-container:focus .refresh-tooltip {
+        visibility: visible;
     }
 
     .refresh {
@@ -96,10 +165,15 @@
         transition: ease-in 100ms;
     }
 
-    .refresh:hover {
+    .refresh-container:hover .refresh {
         transform: rotate(90deg);
         transition: all 0.2s;
         cursor: pointer;
+    }
+
+    .refresh-container:focus .refresh {
+        transform: rotate(90deg);
+        transition: all 0.2s;
     }
 
     .elapsed-time {
@@ -112,7 +186,7 @@
         font-size: 30px;
     }
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 990px) {
         .gross {
             display: none;
         }
