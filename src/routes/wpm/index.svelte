@@ -4,6 +4,7 @@
     import WpmText from '$lib/wpmText/WpmText.svelte';
     import StatBar from '$lib/wpmText/StatBar.svelte';
     import Results from '$lib/wpmText/Results.svelte';
+    import { onMount } from 'svelte';
 
     const text = `To calculate Net WPM, take your gross WPM result and subtract the amount of errors you left in per minute, also known as the error rate. To calculate error rate, simply divide the number of errors by the time you typed for in minutes.`
     //const text = 'hi'
@@ -25,6 +26,10 @@
 
     let totalTime = 0;
     let hasUserCompletedRace = false;
+
+    onMount(() => {
+        document.getElementById('blur').focus();
+    })
 
     const calcRunningCorrectness = (e) => {
         if (!isRaceDone && validTextChars.includes(e.key)) {
@@ -73,6 +78,7 @@
         hasUserCompletedRace = false
         allTextArray = stringToArrays(unfinishedTextRaw)
         totalTime = 0
+        document.getElementById('blur').focus();
     }
 </script>
 
@@ -85,7 +91,7 @@
             isRaceOngoing={isRaceOngoing}
             restartTest={restartTest}
         />
-        <div class="blur" tabindex=0 on:keydown={calcRunningCorrectness}>
+        <div class="blur" id="blur" tabindex=1 on:keydown={calcRunningCorrectness}>
             <div class="racetext" id="racetext" in:fade>
                 <WpmText 
                     currentWordIndex={currentWordIndex} 
@@ -94,9 +100,7 @@
                 />
             </div>
         </div>
-        <div class="helper-text" in:fade>
-            <span><i>Click the above blurred text to focus. Once focused, begin typing to start the test.</i></span>
-        </div>
+        <div class="helper-text"><i>if you mess up while typing, press tab + enter to restart</i></div>
     {:else}
         <Results 
             netWpm={netWpm}
@@ -131,6 +135,26 @@
         border: 2px solid var(--color-secondary);
     }
 
+    .blur :global(.blink-before::before) {
+        height: 0px;
+        animation: none;
+    }
+
+    .blur:focus :global(.blink-before::before) {
+        height: 40px;
+        animation: cursor-blink 1s steps(2) infinite;
+    }
+
+    .racetext:hover {
+        cursor: pointer;
+    }
+
+    @keyframes cursor-blink {
+        0% {
+            opacity: 0.5;
+        }
+    }
+
     .racetext {
         transition: filter 100ms linear ease-out;
         padding: 20px;
@@ -142,18 +166,11 @@
         align-content: flex-start;
         user-select: none;
         background-color: var(--card);
-    }
-
-    .racetext:focus {
-        border: none;
-    }
-
-    .racetext:hover {
-        cursor:pointer;
+        border: 2px solid transparent;
     }
 
     .helper-text {
-        padding-top: 20px;
-        color: var(--text-primary)
+        padding-top: 10px;
+        color: var(--background-text);
     }
 </style>
